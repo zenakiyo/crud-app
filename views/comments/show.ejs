@@ -8,6 +8,13 @@
   <body>
     <h2><%=comment.comment%></h2>
     <h3>-<%=comment.username%></h3>
+    <br />
+    <a href="/comments/<%=comment.id%>/edit">Edit Comment</a>
+    <br />
+    <br />
+    <form method="post" action="/comments/<%=comment.id%>?_method=DELETE">
+      <button>Delete</button>
+    </form>
     <hr />
     <a href="/comments">All Comments</a>
   </body>
